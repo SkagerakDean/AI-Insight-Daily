@@ -3,8 +3,6 @@ title: "AI Keywords Summary"
 description: "A summary list of AI-related core keywords extracted from all site articles."
 ---
 
-# AI Keywords Summary
-
 - AI
 - More Details
 - Claude Code

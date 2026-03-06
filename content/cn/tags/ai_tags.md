@@ -3,8 +3,6 @@ title: "AI 关键词汇总"
 description: "从全站文章内容中提取的 AI 相关核心关键词汇总。"
 ---
 
-# AI 关键词汇总
-
 - AI
 - AIClient2API
 - Claude Code
