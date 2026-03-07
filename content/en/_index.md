@@ -13,7 +13,7 @@ Hexi 2077's AI News Hub
 {{< /hextra/hero-headline >}}
 
 <div style="margin-top: 2rem; margin-bottom: 4rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-  {{< hextra/hero-badge link="/en/2026-03/2026-03-06" >}}🚀 Read Today's Daily Brief{{< /hextra/hero-badge >}}
+  {{< hextra/hero-badge link="/en/2026-03/2026-03-07" >}}🚀 Read Today's News{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="/en/blog/weekly" >}}📊 Browse the AI Weekly{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="https://github.com/justlovemaki" >}}🤝 Business & Partnership Inquiries{{< /hextra/hero-badge >}}
 </div>
@@ -36,12 +36,12 @@ Hexi 2077's AI News Hub
 
 {{< cards cols="3" >}}
 <!-- LATEST_6_CARDS_START -->
-{{< card link="/en/2026-03/2026-03-06" title="AI News Daily 2026/03/06" subtitle="GPT-5.4发布,原生桌面操控,百万上下文,永久记忆,定价引争议 苹果M5芯片AI性能涨四倍,MoE跳过88%专家保97%性能 中国五年规划提AI超50次,Block引AI裁员近半,内存价飙369%" icon="calendar" >}}
+{{< card link="/en/2026-03/2026-03-07" title="AI News Daily 2026/03/07" subtitle="ChatGPT5.4支持百万上下文,Kling3.0捕捉面部神态,Claude上线企业市场 AlignVAR超分推理快扩散模型10倍,WebChain发布最大网页交互数据集 智能体首入政府报告,软银4" icon="calendar" >}}
+  {{< card link="/en/2026-03/2026-03-06" title="AI News Daily 2026/03/06" subtitle="GPT-5.4 released, native desktop control, million context, permanent" icon="calendar" >}}
   {{< card link="/en/2026-03/2026-03-05" title="AI News Daily 2026/03/05" subtitle="OpenAI is set to unveil its new GPT-5.4 model. Latest buzz suggests 🚀" icon="calendar" >}}
   {{< card link="/en/2026-03/2026-03-04" title="AI News Daily 2026/03/04" subtitle="OpenAI Launches GPT-5.3 Instant." icon="calendar" >}}
   {{< card link="/en/2026-03/2026-03-03" title="AI News Daily 2026/03/03" subtitle="Apple has officially announced its new hardware lineup, the iPhone 17e" icon="calendar" >}}
   {{< card link="/en/2026-03/2026-03-02" title="AI News Daily 2026/03/02" subtitle="Nano Banana 2's visual capabilities are blowing minds! You can snap a" icon="calendar" >}}
-  {{< card link="/en/2026-03/2026-03-01" title="AI News Daily 2026/03/01" subtitle="Google Opal's dynamic agent steps are here! Google Labs just dropped" icon="calendar" >}}
 <!-- LATEST_6_CARDS_END -->
 {{< /cards >}}
 
@@ -53,7 +53,7 @@ Hexi 2077's AI News Hub
 New here? Start with the [AI Weekly](/en/blog/weekly/). It helps you quickly understand the most important industry shifts without getting lost in fragmented information.
 
 ### 2. Stay in Daily Sync
-If you want to keep up with the cutting edge, jump straight into the [AI Daily Archive](/en/2026-03/2026-03-06). Just 5 minutes a day keeps you aligned with the global AI pulse.
+If you want to keep up with the cutting edge, jump straight into the [AI Daily Archive](/en/2026-03/2026-03-07). Just 5 minutes a day keeps you aligned with the global AI pulse.
 
 ### 3. Explore Deeper Practice
 Learn why this site exists, then visit the [Blog](/en/blog/) for structured guides on AI tools, workflows, and productivity improvement.
