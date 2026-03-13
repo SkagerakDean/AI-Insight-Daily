@@ -1,5 +1,5 @@
 # Hugo configuration file
-title: 何夕2077的AI资讯 | 精选AI新闻与工具 | 洞悉AI前沿动态
+title: 博观AI资讯
 
 timezone: Asia/Shanghai
 enableRobotsTXT: true
@@ -47,17 +47,9 @@ menu:
       name: AI周报
       pageRef: /blog/weekly
       weight: 2
-    - identifier: blog
-      name: 博客
-      pageRef: /blog
-      weight: 3
-    - identifier: about      
-      name: 关于我 ↗
-      url: "https://github.com/justlovemaki"
-      weight: 4
     - identifier: github   
       name: 同性交友
-      weight: 5
+      weight: 3
       url: "https://github.com/justlovemaki/CloudFlare-AI-Insight-Daily"
       params:
         icon: github
@@ -71,22 +63,6 @@ params:
   descriptionEn: Your daily source for curated AI news & latest artificial intelligence trends. Master generative AI with practical tools & actionable tutorials!
   logo: "images/logo-dark.png"
   
-  author:
-    name: "何夕2077的AI资讯 | 精选AI新闻与工具 | 洞悉AI前沿动态"
-    bio: "去海边整点薯条"
-    email: "justlikemaki@qq.com"
-    website: "https://ai.hubtoday.app/about/"
-    social:
-      - name: "GitHub"
-        url: "https://github.com/justlovemaki"
-        
-  publisher:
-    type: "Person" 
-    name: "何夕2077的AI资讯 | 精选AI新闻与工具 | 洞悉AI前沿动态"
-    url: "https://ai.hubtoday.app/about/"
-    sameAs:
-      - "https://github.com/justlovemaki"
-      
   displayUpdatedDate: false
   dateFormat: "2006/01/02 15:04:05"
 
@@ -152,5 +128,5 @@ languages:
   en:
     contentDir: content/en
     languageName: English
-    title: Hex2077's AI Daily | AI Weekly | AI News | AI Tools | AI Insights
+    title: Boguang AI News
     weight: 2
