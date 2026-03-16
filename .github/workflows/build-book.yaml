@@ -35,6 +35,13 @@ jobs:
           ref: ${{ github.event.inputs.source_branch || 'book' }} # Fallback to default
           path: 'clone'
 
+      - name: Clone weekly source repository
+        uses: actions/checkout@v4
+        with:
+          repository: justlovemaki/Hextra-AI-Insight-Daily
+          ref: main
+          path: 'clone-weekly'
+
       # 第2步：替换图片 URL (如果需要)
       - name: Replace image URLs in daily notes
         run: |
@@ -337,6 +344,27 @@ jobs:
           rm "$CARDS_FILE"
 
           echo "$TARGET_INDEX 更新完成。"
+
+      - name: Sync weekly content from Hextra upstream
+        run: |
+          set -e
+          SOURCE_WEEKLY_DIR="clone-weekly/content/cn/blog/weekly"
+          TARGET_WEEKLY_DIR="content/cn/blog/weekly"
+
+          if [ ! -d "$SOURCE_WEEKLY_DIR" ]; then
+            echo "周报源目录 $SOURCE_WEEKLY_DIR 不存在，跳过。"
+            exit 0
+          fi
+
+          mkdir -p "$TARGET_WEEKLY_DIR"
+          find "$TARGET_WEEKLY_DIR" -maxdepth 1 -type f -name "*.md" ! -name "_index.md" -delete
+          cp "$SOURCE_WEEKLY_DIR"/*.md "$TARGET_WEEKLY_DIR"/
+
+          if [ -f "$SOURCE_WEEKLY_DIR/_index.md" ]; then
+            cp "$SOURCE_WEEKLY_DIR/_index.md" "$TARGET_WEEKLY_DIR/_index.md"
+          fi
+
+          echo "周报同步完成。"
 
       # 第4步：提交 content 目录下的所有修改
       - name: Commit and push changes
