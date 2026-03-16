@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sys
+import tempfile
 import time
 from dataclasses import dataclass
 from pathlib import Path
@@ -29,7 +30,7 @@ class Article:
     kind: str
     path: Path
     title: str
-    lines: list[str]
+    markdown: str
 
 
 class FeishuClient:
@@ -148,6 +149,53 @@ class FeishuClient:
             json_data={"type": file_type, "folder_token": folder_token},
         )
 
+    def upload_markdown(self, file_name: str, content: str) -> str:
+        with tempfile.NamedTemporaryFile("w", encoding="utf-8", suffix=".md", delete=False) as tmp:
+            tmp.write(content)
+            tmp_path = Path(tmp.name)
+        try:
+            data = self._request(
+                "POST",
+                "/drive/v1/medias/upload_all",
+                data={
+                    "file_name": file_name,
+                    "parent_type": "ccm_import_open",
+                    "size": str(tmp_path.stat().st_size),
+                    "extra": json.dumps({"obj_type": "docx", "file_extension": "md"}),
+                },
+                files={"file": (file_name, tmp_path.read_bytes(), "text/markdown")},
+            )
+            return data["file_token"]
+        finally:
+            tmp_path.unlink(missing_ok=True)
+
+    def create_import_task(self, file_token: str, file_name: str, folder_token: str) -> str:
+        data = self._request(
+            "POST",
+            "/drive/v1/import_tasks",
+            json_data={
+                "file_extension": "md",
+                "file_token": file_token,
+                "type": "docx",
+                "file_name": file_name,
+                "point": {"mount_type": 1, "mount_key": folder_token},
+            },
+        )
+        return data["ticket"]
+
+    def poll_import_task(self, ticket: str) -> None:
+        for _ in range(30):
+            data = self._request("GET", f"/drive/v1/import_tasks/{ticket}")
+            result = data.get("result", {})
+            status = result.get("job_status")
+            if status == 0:
+                return
+            if status in {1, 2, 3}:
+                time.sleep(2)
+                continue
+            raise FeishuError(result.get("job_error_msg", f"import failed with status {status}"))
+        raise FeishuError("import task timed out")
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Sync latest Hugo markdown content to Feishu.")
@@ -184,31 +232,26 @@ def split_front_matter(text: str) -> tuple[dict, str]:
     return front_matter, parts[2]
 
 
-def normalize_line(raw_line: str) -> list[str]:
-    line = raw_line.replace("\r", "").replace("<br/>", "\n").replace("<br>", "\n")
-    chunks: list[str] = []
-    for part in line.split("\n"):
-        part = re.sub(r"</?video[^>]*>", "", part)
-        part = re.sub(r"<[^>]+>", "", part)
-        part = re.sub(r"\{\{[%<].*?[>%]\}\}", "", part).strip()
-        if not part:
-            continue
-        if part.startswith("#"):
-            part = f"【{part.lstrip('#').strip()}】"
-        part = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", lambda m: f"[图片] {m.group(2)}", part)
-        part = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", lambda m: f"{m.group(1)}: {m.group(2)}", part)
-        while len(part) > 1800:
-            chunks.append(part[:1800])
-            part = part[1800:]
-        chunks.append(part)
-    return chunks
+def clean_markdown(body: str) -> str:
+    body = body.replace("\r\n", "\n")
+    body = re.sub(
+        r"^\s*>\s*`AI资讯`.*?(?:\n\s*\n|\n(?=## ))",
+        "",
+        body,
+        count=1,
+        flags=re.DOTALL,
+    )
+    body = re.split(r"\n##\s*\*?\*?AI资讯日报多渠道\*?\*?.*$", body, maxsplit=1, flags=re.MULTILINE)[0]
+    body = re.sub(r"<br\s*/?>", "\n", body)
+    body = re.sub(r"\n{3,}", "\n\n", body).strip()
+    return body
 
 
-def markdown_to_lines(title: str, body: str) -> list[str]:
-    lines = [title]
-    for raw_line in body.splitlines():
-        lines.extend(normalize_line(raw_line))
-    return [line for line in lines if line]
+def build_markdown(title: str, body: str) -> str:
+    cleaned = clean_markdown(body)
+    if cleaned.startswith("# "):
+        return cleaned + "\n"
+    return f"# {title}\n\n{cleaned}\n"
 
 
 def load_article(path: Path, kind: str) -> Article:
@@ -218,7 +261,7 @@ def load_article(path: Path, kind: str) -> Article:
         .replace("何夕2077", "博观AI资讯")
         .strip()
     )
-    return Article(kind=kind, path=path, title=title, lines=markdown_to_lines(title, body))
+    return Article(kind=kind, path=path, title=title, markdown=build_markdown(title, body))
 
 
 def daily_files() -> list[Path]:
@@ -260,22 +303,18 @@ def delete_same_title_docs(client: FeishuClient, folder_token: str, title: str) 
 
 def sync_article(client: FeishuClient, article: Article, folder_token: str) -> None:
     delete_same_title_docs(client, folder_token, article.title)
-    document_id = client.create_document(article.title)
+    uploaded_file = client.upload_markdown(f"{article.title}.md", article.markdown)
     try:
-        client.append_lines(document_id, article.lines)
         for attempt in range(3):
             try:
-                client.move_file(document_id, folder_token, "docx")
+                ticket = client.create_import_task(uploaded_file, article.title, folder_token)
+                client.poll_import_task(ticket)
                 break
             except FeishuError as exc:
                 if "resource contention occurred" not in str(exc) or attempt == 2:
                     raise
                 time.sleep(2)
     except Exception:
-        try:
-            client.delete_file(document_id, "docx")
-        except Exception:
-            pass
         raise
 
 
