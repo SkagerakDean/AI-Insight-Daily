@@ -8,7 +8,7 @@ on:
       - "scripts/sync_to_feishu.py"
       - ".github/workflows/sync-feishu.yml"
   schedule:
-    - cron: "30 22 * * *"
+    - cron: "0 3 * * *"
   workflow_dispatch:
     inputs:
       mode:
