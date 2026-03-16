@@ -50,6 +50,8 @@ jobs:
           FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
           FEISHU_DAILY_FOLDER_TOKEN: ${{ secrets.FEISHU_DAILY_FOLDER_TOKEN }}
           FEISHU_WEEKLY_FOLDER_TOKEN: ${{ secrets.FEISHU_WEEKLY_FOLDER_TOKEN }}
+          FEISHU_NOTIFY_RECEIVE_IDS: ${{ secrets.FEISHU_NOTIFY_RECEIVE_IDS }}
+          FEISHU_NOTIFY_ID_TYPE: ${{ secrets.FEISHU_NOTIFY_ID_TYPE }}
         run: |
           python3 scripts/sync_to_feishu.py \
             --mode "${{ github.event.inputs.mode || 'latest' }}" \

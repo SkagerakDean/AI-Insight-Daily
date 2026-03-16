@@ -31,6 +31,7 @@ class Article:
     path: Path
     title: str
     markdown: str
+    notification_summary: str
 
 
 class FeishuClient:
@@ -196,6 +197,53 @@ class FeishuClient:
             raise FeishuError(result.get("job_error_msg", f"import failed with status {status}"))
         raise FeishuError("import task timed out")
 
+    def send_message_card(
+        self,
+        *,
+        receive_id: str,
+        receive_id_type: str,
+        title: str,
+        summary: str,
+        doc_url: str,
+        kind: str,
+    ) -> None:
+        header_title = f"{'日报' if kind == 'daily' else '周报'}更新通知"
+        color = "blue" if kind == "daily" else "green"
+        card = {
+            "config": {"wide_screen_mode": True},
+            "header": {
+                "template": color,
+                "title": {"tag": "plain_text", "content": header_title},
+            },
+            "elements": [
+                {
+                    "tag": "markdown",
+                    "content": f"**{title}**\n\n{summary}",
+                },
+                {
+                    "tag": "action",
+                    "actions": [
+                        {
+                            "tag": "button",
+                            "text": {"tag": "plain_text", "content": "打开飞书文档"},
+                            "type": "primary",
+                            "url": doc_url,
+                        }
+                    ],
+                },
+            ],
+        }
+        self._request(
+            "POST",
+            "/im/v1/messages",
+            params={"receive_id_type": receive_id_type},
+            json_data={
+                "receive_id": receive_id,
+                "msg_type": "interactive",
+                "content": json.dumps(card, ensure_ascii=False),
+            },
+        )
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Sync latest Hugo markdown content to Feishu.")
@@ -259,6 +307,28 @@ def build_markdown(title: str, body: str) -> str:
     return f"# {title}\n\n{cleaned}\n"
 
 
+def extract_daily_summary(body: str) -> str:
+    match = re.search(r"##\s*\*?\*?今日摘要\*?\*?.*?```(.*?)```", body, flags=re.DOTALL)
+    if not match:
+        return ""
+    text = re.sub(r"\s+", " ", match.group(1)).strip()
+    return text[:500]
+
+
+def extract_weekly_summary(body: str) -> str:
+    lines: list[str] = []
+    for raw_line in body.splitlines():
+        stripped = raw_line.strip()
+        if stripped.startswith("> **期刊."):
+            lines.append(stripped.lstrip("> ").strip())
+        elif stripped.startswith("> **本周关键词**"):
+            lines.append(stripped.lstrip("> ").strip())
+        elif stripped.startswith("> **主编寄语**"):
+            lines.append(stripped.lstrip("> ").strip())
+            break
+    return "\n".join(lines)
+
+
 def load_article(path: Path, kind: str) -> Article:
     front_matter, body = split_front_matter(path.read_text(encoding="utf-8"))
     title = (
@@ -266,7 +336,16 @@ def load_article(path: Path, kind: str) -> Article:
         .replace("何夕2077", "博观AI资讯")
         .strip()
     )
-    return Article(kind=kind, path=path, title=title, markdown=build_markdown(title, body))
+    notification_summary = (
+        extract_daily_summary(body) if kind == "daily" else extract_weekly_summary(body)
+    )
+    return Article(
+        kind=kind,
+        path=path,
+        title=title,
+        markdown=build_markdown(title, body),
+        notification_summary=notification_summary,
+    )
 
 
 def daily_files() -> list[Path]:
@@ -306,7 +385,14 @@ def delete_same_title_docs(client: FeishuClient, folder_token: str, title: str) 
             client.delete_file(item["token"], "docx")
 
 
-def sync_article(client: FeishuClient, article: Article, folder_token: str) -> None:
+def find_doc_url(client: FeishuClient, folder_token: str, title: str) -> str:
+    for item in client.list_folder_files(folder_token):
+        if item.get("name") == title and item.get("type") == "docx":
+            return item.get("url", "")
+    raise FeishuError(f"unable to locate synced doc url for {title}")
+
+
+def sync_article(client: FeishuClient, article: Article, folder_token: str) -> str:
     delete_same_title_docs(client, folder_token, article.title)
     uploaded_file = client.upload_markdown(f"{article.title}.md", article.markdown)
     try:
@@ -321,6 +407,7 @@ def sync_article(client: FeishuClient, article: Article, folder_token: str) -> N
                 time.sleep(2)
     except Exception:
         raise
+    return find_doc_url(client, folder_token, article.title)
 
 
 def main() -> int:
@@ -329,6 +416,8 @@ def main() -> int:
     app_secret = require_env("FEISHU_APP_SECRET")
     daily_folder = require_env("FEISHU_DAILY_FOLDER_TOKEN")
     weekly_folder = require_env("FEISHU_WEEKLY_FOLDER_TOKEN")
+    notify_receive_ids = [x.strip() for x in os.environ.get("FEISHU_NOTIFY_RECEIVE_IDS", "").split(",") if x.strip()]
+    notify_id_type = os.environ.get("FEISHU_NOTIFY_ID_TYPE", "user_id").strip() or "user_id"
 
     articles = pick_articles(args.mode, args.kind)
     if not articles:
@@ -348,7 +437,23 @@ def main() -> int:
     for article in articles:
         folder_token = daily_folder if article.kind == "daily" else weekly_folder
         try:
-            sync_article(client, article, folder_token)
+            doc_url = sync_article(client, article, folder_token)
+            if notify_receive_ids:
+                for receive_id in notify_receive_ids:
+                    try:
+                        client.send_message_card(
+                            receive_id=receive_id,
+                            receive_id_type=notify_id_type,
+                            title=article.title,
+                            summary=article.notification_summary,
+                            doc_url=doc_url,
+                            kind=article.kind,
+                        )
+                    except FeishuError as exc:
+                        print(
+                            f"Warning: failed to send notification to {receive_id} "
+                            f"({notify_id_type}): {exc}"
+                        )
             print(f"Synced {article.kind}: {article.title}")
         except FeishuError as exc:
             if "destination parent no permission" in str(exc) or "mount_no_permission" in str(exc):
