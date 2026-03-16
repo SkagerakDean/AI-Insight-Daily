@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sys
+import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -262,7 +263,14 @@ def sync_article(client: FeishuClient, article: Article, folder_token: str) -> N
     document_id = client.create_document(article.title)
     try:
         client.append_lines(document_id, article.lines)
-        client.move_file(document_id, folder_token, "docx")
+        for attempt in range(3):
+            try:
+                client.move_file(document_id, folder_token, "docx")
+                break
+            except FeishuError as exc:
+                if "resource contention occurred" not in str(exc) or attempt == 2:
+                    raise
+                time.sleep(2)
     except Exception:
         try:
             client.delete_file(document_id, "docx")

@@ -6,3 +6,4 @@ resources/
 # Editor
 .vscode/
 .DS_Store
+__pycache__/
