@@ -311,8 +311,11 @@ def extract_daily_summary(body: str) -> str:
     match = re.search(r"##\s*\*?\*?今日摘要\*?\*?.*?```(.*?)```", body, flags=re.DOTALL)
     if not match:
         return ""
-    text = re.sub(r"\s+", " ", match.group(1)).strip()
-    return text[:500]
+    lines = [line.strip() for line in match.group(1).splitlines() if line.strip()]
+    if not lines:
+        return ""
+    formatted = "\n".join(f"- {line}" for line in lines)
+    return formatted[:900]
 
 
 def extract_weekly_summary(body: str) -> str:
