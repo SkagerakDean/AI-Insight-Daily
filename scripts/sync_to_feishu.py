@@ -35,6 +35,12 @@ class Article:
     notification_summary: str
 
 
+@dataclass(frozen=True)
+class NotificationTarget:
+    receive_id: str
+    receive_id_type: str
+
+
 class FeishuClient:
     def __init__(self, app_id: str, app_secret: str) -> None:
         self.app_id = app_id
@@ -471,8 +477,25 @@ def main() -> int:
     app_secret = require_env("FEISHU_APP_SECRET")
     daily_folder = require_env("FEISHU_DAILY_FOLDER_TOKEN")
     weekly_folder = require_env("FEISHU_WEEKLY_FOLDER_TOKEN")
-    notify_receive_ids = [x.strip() for x in os.environ.get("FEISHU_NOTIFY_RECEIVE_IDS", "").split(",") if x.strip()]
-    notify_id_type = os.environ.get("FEISHU_NOTIFY_ID_TYPE", "user_id").strip() or "user_id"
+    notify_targets: list[NotificationTarget] = []
+    legacy_receive_ids = [
+        x.strip() for x in os.environ.get("FEISHU_NOTIFY_RECEIVE_IDS", "").split(",") if x.strip()
+    ]
+    legacy_id_type = os.environ.get("FEISHU_NOTIFY_ID_TYPE", "user_id").strip() or "user_id"
+    notify_targets.extend(
+        NotificationTarget(receive_id=receive_id, receive_id_type=legacy_id_type)
+        for receive_id in legacy_receive_ids
+    )
+    notify_targets.extend(
+        NotificationTarget(receive_id=receive_id.strip(), receive_id_type="open_id")
+        for receive_id in os.environ.get("FEISHU_NOTIFY_OPEN_IDS", "").split(",")
+        if receive_id.strip()
+    )
+    notify_targets.extend(
+        NotificationTarget(receive_id=receive_id.strip(), receive_id_type="chat_id")
+        for receive_id in os.environ.get("FEISHU_NOTIFY_CHAT_IDS", "").split(",")
+        if receive_id.strip()
+    )
 
     since = parse_since(args.since)
     articles = pick_articles(args.mode, args.kind, since)
@@ -494,12 +517,12 @@ def main() -> int:
         folder_token = daily_folder if article.kind == "daily" else weekly_folder
         try:
             doc_url = sync_article(client, article, folder_token)
-            if notify_receive_ids:
-                for receive_id in notify_receive_ids:
+            if notify_targets:
+                for target in notify_targets:
                     try:
                         client.send_message_card(
-                            receive_id=receive_id,
-                            receive_id_type=notify_id_type,
+                            receive_id=target.receive_id,
+                            receive_id_type=target.receive_id_type,
                             title=article.title,
                             summary=article.notification_summary,
                             doc_url=doc_url,
@@ -507,8 +530,8 @@ def main() -> int:
                         )
                     except FeishuError as exc:
                         print(
-                            f"Warning: failed to send notification to {receive_id} "
-                            f"({notify_id_type}): {exc}"
+                            f"Warning: failed to send notification to {target.receive_id} "
+                            f"({target.receive_id_type}): {exc}"
                         )
             print(f"Synced {article.kind}: {article.title}")
         except FeishuError as exc:
