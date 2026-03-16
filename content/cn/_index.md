@@ -9,7 +9,7 @@ cascade:
 ---
 
 {{< hextra/hero-headline >}}
-何夕2077的AI资讯站
+博观AI资讯
 {{< /hextra/hero-headline >}}
 
 <div style="margin-top: 2rem; margin-bottom: 4rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">

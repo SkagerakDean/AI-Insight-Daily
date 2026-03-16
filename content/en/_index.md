@@ -9,7 +9,7 @@ cascade:
   type: docs
 ---
 {{< hextra/hero-headline >}}
-Hexi 2077's AI News Hub
+Boguang AI News
 {{< /hextra/hero-headline >}}
 
 <div style="margin-top: 2rem; margin-bottom: 4rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">

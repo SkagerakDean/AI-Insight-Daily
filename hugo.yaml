@@ -47,17 +47,8 @@ menu:
       name: AI周报
       pageRef: /blog/weekly
       weight: 2
-    - identifier: github   
-      name: 同性交友
-      weight: 3
-      url: "https://github.com/justlovemaki/CloudFlare-AI-Insight-Daily"
-      params:
-        icon: github
 
 params:
-  adsenseId: "ca-pub-8136412975724403"
-  wwgg: "388"
-  umamiKey: "2b24e36d-6e56-499b-8b7e-aea4d308caff"
   ahrefsKey-del: "Qe0ZpZJ6/W8rgMFnLgk4kg"
   description: 专注个人每日整理的AI资讯站。我们为您过滤全网信息噪音，只提供最精选的国内外AI新闻与大模型最新动态。除了挖掘最实用的AI办公效率工具推荐，还搭配零基础也能懂的AI落地应用实操教程。助您每天高效获取人工智能领域的前沿动态，洞悉全球人工智能最新发展趋势，快人一步打破科技信息差，轻松享受AI红利！
   descriptionEn: Your daily source for curated AI news & latest artificial intelligence trends. Master generative AI with practical tools & actionable tutorials!
@@ -67,7 +58,7 @@ params:
   dateFormat: "2006/01/02 15:04:05"
 
   navbar:
-    displayTitle: false
+    displayTitle: true
     displayLogo: true
     logo:
       path: images/logo.png
