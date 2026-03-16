@@ -243,6 +243,11 @@ def clean_markdown(body: str) -> str:
     )
     body = re.split(r"\n##\s*\*?\*?AI资讯日报多渠道\*?\*?.*$", body, maxsplit=1, flags=re.MULTILINE)[0]
     body = re.sub(r"<br\s*/?>", "\n", body)
+    body = re.sub(
+        r"!\[([^\]]*)\]\(([^)]+)\)",
+        lambda m: f"[图片链接：{m.group(1) or '查看原图'}]({m.group(2)})",
+        body,
+    )
     body = re.sub(r"\n{3,}", "\n\n", body).strip()
     return body
 
