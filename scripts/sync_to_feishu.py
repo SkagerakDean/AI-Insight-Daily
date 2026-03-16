@@ -10,6 +10,7 @@ import sys
 import tempfile
 import time
 from dataclasses import dataclass
+from datetime import date, datetime
 from pathlib import Path
 from typing import Iterable
 
@@ -259,6 +260,10 @@ def parse_args() -> argparse.Namespace:
         default="all",
         help="Select which content stream to sync.",
     )
+    parser.add_argument(
+        "--since",
+        help="Only sync content whose date is on or after YYYY-MM-DD.",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Show what would be synced.")
     return parser.parse_args()
 
@@ -367,15 +372,62 @@ def weekly_files() -> list[Path]:
     return sorted(matches)
 
 
-def pick_articles(mode: str, kind: str) -> list[Article]:
+def parse_since(value: str | None) -> date | None:
+    if not value:
+        return None
+    try:
+        return datetime.strptime(value, "%Y-%m-%d").date()
+    except ValueError as exc:
+        raise SystemExit("--since must use YYYY-MM-DD format") from exc
+
+
+def extract_article_date(path: Path, kind: str) -> date | None:
+    if kind == "daily":
+        try:
+            return datetime.strptime(path.stem, "%Y-%m-%d").date()
+        except ValueError:
+            return None
+
+    front_matter, _ = split_front_matter(path.read_text(encoding="utf-8"))
+    raw = front_matter.get("date")
+    if raw is None:
+        return None
+    if isinstance(raw, datetime):
+        return raw.date()
+    if isinstance(raw, date):
+        return raw
+    text = str(raw).strip()
+    for fmt in ("%Y-%m-%d %H:%M:%S %z", "%Y-%m-%d %H:%M:%S", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(text, fmt).date()
+        except ValueError:
+            continue
+    match = re.match(r"(\d{4}-\d{2}-\d{2})", text)
+    if match:
+        return datetime.strptime(match.group(1), "%Y-%m-%d").date()
+    return None
+
+
+def filter_paths_since(paths: list[Path], kind: str, since: date | None) -> list[Path]:
+    if since is None:
+        return paths
+    filtered: list[Path] = []
+    for path in paths:
+        article_date = extract_article_date(path, kind)
+        if article_date is not None and article_date >= since:
+            filtered.append(path)
+    return filtered
+
+
+def pick_articles(mode: str, kind: str, since: date | None) -> list[Article]:
     selected: list[Article] = []
     if kind in {"all", "daily"}:
-        paths = daily_files()
+        paths = filter_paths_since(daily_files(), "daily", since)
         if mode == "latest" and paths:
             paths = [paths[-1]]
         selected.extend(load_article(path, "daily") for path in paths)
     if kind in {"all", "weekly"}:
-        paths = weekly_files()
+        paths = filter_paths_since(weekly_files(), "weekly", since)
         if mode == "latest" and paths:
             paths = [paths[-1]]
         selected.extend(load_article(path, "weekly") for path in paths)
@@ -422,7 +474,8 @@ def main() -> int:
     notify_receive_ids = [x.strip() for x in os.environ.get("FEISHU_NOTIFY_RECEIVE_IDS", "").split(",") if x.strip()]
     notify_id_type = os.environ.get("FEISHU_NOTIFY_ID_TYPE", "user_id").strip() or "user_id"
 
-    articles = pick_articles(args.mode, args.kind)
+    since = parse_since(args.since)
+    articles = pick_articles(args.mode, args.kind, since)
     if not articles:
         print("No matching articles found.")
         return 0

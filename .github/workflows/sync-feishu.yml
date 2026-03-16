@@ -28,6 +28,11 @@ on:
           - all
           - daily
           - weekly
+      since:
+        description: "Only sync content on or after this date (YYYY-MM-DD)"
+        required: false
+        default: ""
+        type: string
 
 jobs:
   sync:
@@ -55,4 +60,5 @@ jobs:
         run: |
           python3 scripts/sync_to_feishu.py \
             --mode "${{ github.event.inputs.mode || 'latest' }}" \
-            --kind "${{ github.event.inputs.kind || 'all' }}"
+            --kind "${{ github.event.inputs.kind || 'all' }}" \
+            ${{ github.event.inputs.since && format('--since "{0}"', github.event.inputs.since) || '' }}
