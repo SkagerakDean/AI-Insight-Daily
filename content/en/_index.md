@@ -36,12 +36,12 @@ Boguang AI News
 
 {{< cards cols="3" >}}
 <!-- LATEST_6_CARDS_START -->
-{{< card link="/en/2026-03/2026-03-18" title="AI News Daily 2026/03/18" subtitle="GPT-5.4轻量模型与Midjourney V8测试发布，推理速度与生成质量大幅提升 DeepMind扩容蛋白质库，AI涌现社会行为，Schmidt悬赏攻克模型欺骗 甲骨文裁员三万因AI基建成本飙升" icon="calendar" >}}
+{{< card link="/en/2026-03/2026-03-19" title="AI News Daily 2026/03/19" subtitle="腾讯混元3.0四月发布，MiniMax M2.7全能模型官宣，Anthropic抢发远程代理 梯度下降激活层错位被揭示，高维良性过拟ig证伪“垃圾进垃圾出” 英伟达H200获准入华，布局整机争万亿市场" icon="calendar" >}}
+  {{< card link="/en/2026-03/2026-03-18" title="AI News Daily 2026/03/18" subtitle="GPT-5.4轻量模型与Midjourney V8测试发布，推理速度与生成质量大幅提升 DeepMind扩容蛋白质库，AI涌现社会行为，Schmidt悬赏攻克模型欺骗 甲骨文裁员三万因AI基建成本飙升" icon="calendar" >}}
   {{< card link="/en/2026-03/2026-03-17" title="AI News Daily 2026/03/17" subtitle="英伟达发售GB300桌面超算，748GB内存可跑万亿参数模型 智谱发布GLM-5-Turbo，OpenAI拟将Sora接入ChatGPT 中科院DeepRead提升长文档问答，联电年内量产光子芯片 大" icon="calendar" >}}
   {{< card link="/en/2026-03/2026-03-16" title="AI News Daily 2026/03/16" subtitle="微软英伟达OpenAI同日发布新品，千亿融资刷新纪录 央视315曝光AI搜索投毒黑产，伊朗袭击阿布扎比算力中心 月之暗面估值破千亿寻求新融资，英伟达GTC2026大会震撼开幕 中国十五五规划定调AI为" icon="calendar" >}}
   {{< card link="/en/2026-03/2026-03-15" title="AI News Daily 2026/03/15" subtitle="Claude百万token上下文全面开放，支持600张图片 360发布安全龙虾系列，阿里开源Qwen3-ASR语音模型 科技裁员达4.5万人，Meta模型Avocado延期且倾向闭源 OpenViki" icon="calendar" >}}
   {{< card link="/en/2026-03/2026-03-14" title="AI News Daily 2026/03/14" subtitle="Gemini手机跨App自动执行任务，Claude插件实现跨应用协作与动态图表 谷歌地图十年最大升级，Anthropic亿元建生态，老板电器发AI烹饪眼镜 LLM幻觉根源被理论拆解，清华腾讯GTR框架" icon="calendar" >}}
-  {{< card link="/en/2026-03/2026-03-13" title="AI News Daily 2026/03/13" subtitle="Aishi Technology announces C-round funding and PixVerse R1; Tencent E'xia" icon="calendar" >}}
 <!-- LATEST_6_CARDS_END -->
 {{< /cards >}}
 
@@ -53,7 +53,7 @@ Boguang AI News
 For newcomers, the [AI Weekly](/en/blog/weekly/) is your ideal starting point! It's designed to help you quickly grasp crucial industry shifts, preventing you from getting lost in fragmented information. Let's get you up to speed!
 
 ### 2. Stay in Daily Sync
-The [AI Daily Archive](/en/2026-03/2026-03-18) is your go-to for staying on the cutting edge! Just 5 minutes a day will keep you perfectly aligned with the global AI pulse. Stay sharp! ⚡
+The [AI Daily Archive](/en/2026-03/2026-03-19) is your go-to for staying on the cutting edge! Just 5 minutes a day will keep you perfectly aligned with the global AI pulse. Stay sharp! ⚡
 
 ### 3. Explore Deeper Practice
 For deeper practice, the [Blog](/en/blog/) is where you should dive in! It offers structured guides on AI tools, workflows, and boosting your productivity. Unleash your inner tech wizard! 💡
