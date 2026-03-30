@@ -13,7 +13,7 @@ cascade:
 {{< /hextra/hero-headline >}}
 
 <div style="margin-top: 2rem; margin-bottom: 4rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-  {{< hextra/hero-badge link="/2026-03/2026-03-29" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
+  {{< hextra/hero-badge link="/2026-03/2026-03-30" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="/blog/weekly" >}}📊 浏览 AI 周报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="https://github.com/justlovemaki" >}}🤝 商务合作交流{{< /hextra/hero-badge >}}
 </div>
@@ -36,12 +36,12 @@ cascade:
 
 {{< cards cols="3" >}}
 <!-- LATEST_6_CARDS_START -->
-{{< card link="/2026-03/2026-03-29" title="AI资讯日报 2026/03/29" subtitle="Claude Mythos、Voxtral TTS等新模型密集发布 谷歌TurboQuant论文涉嫌抄袭造假，曾致内存股暴跌九百亿 AI冲击九百万高技能岗位，Anthropic工程师已转型项目管理者 " icon="calendar" >}}
+{{< card link="/2026-03/2026-03-30" title="AI资讯日报 2026/03/30" subtitle="Claude 5.0内测90分钟破Linux漏洞，付费用户翻倍 推理模型API实际成本与标价偏差最高达28倍 Arm发布数据中心芯片，深度伪造冲击战争舆论 微软VibeVoice、DragNeXt等多" icon="calendar" >}}
+  {{< card link="/2026-03/2026-03-29" title="AI资讯日报 2026/03/29" subtitle="Claude Mythos、Voxtral TTS等新模型密集发布 谷歌TurboQuant论文涉嫌抄袭造假，曾致内存股暴跌九百亿 AI冲击九百万高技能岗位，Anthropic工程师已转型项目管理者 " icon="calendar" >}}
   {{< card link="/2026-03/2026-03-28" title="AI资讯日报 2026/03/28" subtitle="GLM5.1全面超越前代，Gemini支持导入竞品数据 IBM发布智能体工作流综述，Claude查论文提升超参搜索3.2% 软银400亿投OpenAI，字节阿里转投华为芯片 NeurIPS封禁中国机构" icon="calendar" >}}
   {{< card link="/2026-03/2026-03-27" title="AI资讯日报 2026/03/27" subtitle="Gemini 3.1 Flash Live与Lyria 3 Pro发布，谷歌TurboQuant压缩算法冲击内存行业 CapCut无时间线编辑器、阿里Qoder多智能体编程、钉钉悟空AI密集上线 Cl" icon="calendar" >}}
   {{< card link="/2026-03/2026-03-26" title="AI资讯日报 2026/03/26" subtitle="英伟达Nemotron Nano 12B、谷歌Lyria 3、TurboQuant及即梦3.0Pro等新模型密集发布 LeCun团队LeWM仅1500万参数实现48倍规划提速，MIT提出模型过度自信检" icon="calendar" >}}
   {{< card link="/2026-03/2026-03-25" title="AI资讯日报 2026/03/25" subtitle="苹果重构Siri增记忆，英伟达发布Nemotron 3 Super OpenAI设非营利机构年投10亿，关停Sora视频产品 迪士尼撤销OpenAI十亿合约，欧洲议会拟禁脱衣AI Anthropic发" icon="calendar" >}}
-  {{< card link="/2026-03/2026-03-24" title="AI资讯日报 2026/03/24" subtitle="Claude发布电脑自主操控，Mistral推企业私有建模平台 对齐评估漏洞曝光，简单微调可绕过模型审查 白宫定训练数据合理使用，沃顿揭人类认知投降 SK海力士利润首超三星，iPhone跑通400B " icon="calendar" >}}
 <!-- LATEST_6_CARDS_END -->
 {{< /cards >}}
 
@@ -53,7 +53,7 @@ cascade:
 初次访问？请先阅读 [AI 周报](/blog/weekly/)。它可以帮你快速梳理近期行业最重要的变化，避免陷入信息碎片的海洋。
 
 ### 2. 保持每日同步
-如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-03/2026-03-29)。每天仅需 5 分钟，即可同步全球 AI 节奏。
+如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-03/2026-03-30)。每天仅需 5 分钟，即可同步全球 AI 节奏。
 
 ### 3. 探索深度实践
 了解本站初衷，并在 [博客](/blog/) 中获取系统的 AI 工具应用与效率提升指南。
