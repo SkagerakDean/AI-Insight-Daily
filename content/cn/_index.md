@@ -13,7 +13,7 @@ cascade:
 {{< /hextra/hero-headline >}}
 
 <div style="margin-top: 2rem; margin-bottom: 4rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-  {{< hextra/hero-badge link="/2026-04/2026-04-06" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
+  {{< hextra/hero-badge link="/2026-04/2026-04-07" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="/blog/weekly" >}}📊 浏览 AI 周报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="https://github.com/justlovemaki" >}}🤝 商务合作交流{{< /hextra/hero-badge >}}
 </div>
@@ -36,7 +36,8 @@ cascade:
 
 {{< cards cols="3" >}}
 <!-- LATEST_6_CARDS_START -->
-{{< card link="/2026-04/2026-04-06" title="AI资讯日报 2026/04/06" subtitle="OpenAI曝全新架构Spud，非GPT续作；ChatGPT 6传闻4月14日发布，性能涨40% 微软发布三款MAI自研模型，涵盖语音与图像生成，加速去OpenAI依赖 网络拓扑推导权重更新、纯Tri" icon="calendar" >}}
+{{< card link="/2026-04/2026-04-07" title="AI资讯日报 2026/04/07" subtitle="Gemini 3.1 Pro入驻Augment，谷歌Eloquent免费离线听写上线，万相Wan2.7升级导演套件 OpenClaw内置视频音乐生成与Dreaming记忆机制，X平台API改按量计费支" icon="calendar" >}}
+  {{< card link="/2026-04/2026-04-06" title="AI资讯日报 2026/04/06" subtitle="OpenAI曝全新架构Spud，非GPT续作；ChatGPT 6传闻4月14日发布，性能涨40% 微软发布三款MAI自研模型，涵盖语音与图像生成，加速去OpenAI依赖 网络拓扑推导权重更新、纯Tri" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-05" title="AI资讯日报 2026/04/05" subtitle="Gemini获安卓最高权限成系统级管家，月费$19.99需交全部隐私 DeepSeek V4基于TileLang重写适配华为昇腾，算力达H20的2.87倍 斯坦福实锤ChatGPT讨好度比真人高49%" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-03" title="AI资讯日报 2026/04/03" subtitle="阿里Qwen3.6-Plus、微软三款基础模型、Claude适配Windows Gemma 4多模态架构发布，Schmidhuber指控LeCun抄袭JEPA 中国AI使用量首超美国，美数据中心遇设备" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-02" title="AI资讯日报 2026/04/02" subtitle="英伟达TAO升级、阿里Wan2.7、Arcee Trinity等多款AI模型密集发布 Nova-X解决长文本遗忘、微软ADeLe登Nature、本地语音智能体落地 字节更名词元跳动、微软55亿投新加坡" icon="calendar" >}}
@@ -52,7 +53,7 @@ cascade:
 初次访问？请先阅读 [AI 周报](/blog/weekly/)。它可以帮你快速梳理近期行业最重要的变化，避免陷入信息碎片的海洋。
 
 ### 2. 保持每日同步
-如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-04/2026-04-06)。每天仅需 5 分钟，即可同步全球 AI 节奏。
+如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-04/2026-04-07)。每天仅需 5 分钟，即可同步全球 AI 节奏。
 
 ### 3. 探索深度实践
 了解本站初衷，并在 [博客](/blog/) 中获取系统的 AI 工具应用与效率提升指南。
