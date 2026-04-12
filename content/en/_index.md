@@ -36,12 +36,12 @@ Boguang AI News
 
 {{< cards cols="3" >}}
 <!-- LATEST_6_CARDS_START -->
-{{< card link="/en/2026-04/2026-04-11" title="AI News Daily 2026/04/11" subtitle="阿里Wan2.7登顶视频榜Word插件发布 蚂蚁夺冠图像检测警惕智能体漏洞 免费AI插广机写内容过半引创作危机 专家流失中美算力差距存大半年 整理编程实践脚本自动抢占福利" icon="calendar" >}}
+{{< card link="/en/2026-04/2026-04-12" title="AI News Daily 2026/04/12" subtitle="Shopify向智能体开放后台读写权限，新引擎成功实现高质量物理模拟 软件行业因智能体替代导致市值蒸发，Anthropic公司营收大幅飙升 京东开源百亿参数空间智能模型，神父参与制定大模型伦理准则宪法" icon="calendar" >}}
+  {{< card link="/en/2026-04/2026-04-11" title="AI News Daily 2026/04/11" subtitle="阿里Wan2.7登顶视频榜Word插件发布 蚂蚁夺冠图像检测警惕智能体漏洞 免费AI插广机写内容过半引创作危机 专家流失中美算力差距存大半年 整理编程实践脚本自动抢占福利" icon="calendar" >}}
   {{< card link="/en/2026-04/2026-04-10" title="AI News Daily 2026/04/10" subtitle="扣子2.5赋予Agent云设备与长期记忆，腾讯龙虾浏览器支持微信远程操控电脑 清华AutoSOTA一周刷新105个SOTA，智元GO-2具身模型成功率达98.5% OpenAI模型一次攻克五项Erdő" icon="calendar" >}}
   {{< card link="/en/2026-04/2026-04-09" title="AI News Daily 2026/04/09" subtitle="DeepSeek疑似V4暗更，新增快速与专家模式 Anthropic发布托管Agent平台，每小时仅$0.08 OpenAI移除安全关停机制，资本优先引发担忧 Aristotle AI形式化91%厄多" icon="calendar" >}}
   {{< card link="/en/2026-04/2026-04-08" title="AI News Daily 2026/04/08" subtitle="Anthropic发布Mythos模型性能断崖领先，迫使OpenAI弃旧 DeepSeek全面升级界面与推理能力，Codex周活破三百万 OpenClaw揭示智能体CIK投毒攻击成功率达74% Met" icon="calendar" >}}
   {{< card link="/en/2026-04/2026-04-07" title="AI News Daily 2026/04/07" subtitle="Gemini 3.1 Pro入驻Augment，谷歌Eloquent免费离线听写上线，万相Wan2.7升级导演套件 OpenClaw内置视频音乐生成与Dreaming记忆机制，X平台API改按量计费支" icon="calendar" >}}
-  {{< card link="/en/2026-04/2026-04-06" title="AI News Daily 2026/04/06" subtitle="OpenAI曝全新架构Spud，非GPT续作；ChatGPT 6传闻4月14日发布，性能涨40% 微软发布三款MAI自研模型，涵盖语音与图像生成，加速去OpenAI依赖 网络拓扑推导权重更新、纯Tri" icon="calendar" >}}
 <!-- LATEST_6_CARDS_END -->
 {{< /cards >}}
 
@@ -53,7 +53,7 @@ Boguang AI News
 For newcomers, the [AI Weekly](/en/blog/weekly/) is your ideal starting point! It's designed to help you quickly grasp crucial industry shifts, preventing you from getting lost in fragmented information. Let's get you up to speed!
 
 ### 2. Stay in Daily Sync
-The [AI Daily Archive](/en/2026-04/2026-04-11) is your go-to for staying on the cutting edge! Just 5 minutes a day will keep you perfectly aligned with the global AI pulse. Stay sharp! ⚡
+The [AI Daily Archive](/en/2026-04/2026-04-12) is your go-to for staying on the cutting edge! Just 5 minutes a day will keep you perfectly aligned with the global AI pulse. Stay sharp! ⚡
 
 ### 3. Explore Deeper Practice
 For deeper practice, the [Blog](/en/blog/) is where you should dive in! It offers structured guides on AI tools, workflows, and boosting your productivity. Unleash your inner tech wizard! 💡
