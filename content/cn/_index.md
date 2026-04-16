@@ -13,7 +13,7 @@ cascade:
 {{< /hextra/hero-headline >}}
 
 <div style="margin-top: 2rem; margin-bottom: 4rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-  {{< hextra/hero-badge link="/2026-04/2026-04-15" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
+  {{< hextra/hero-badge link="/2026-04/2026-04-16" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="/blog/weekly" >}}📊 浏览 AI 周报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="https://github.com/justlovemaki" >}}🤝 商务合作交流{{< /hextra/hero-badge >}}
 </div>
@@ -36,12 +36,12 @@ cascade:
 
 {{< cards cols="3" >}}
 <!-- LATEST_6_CARDS_START -->
-{{< card link="/2026-04/2026-04-15" title="AI资讯日报 2026/04/15" subtitle="Claude重构支持多任务编程，MiniMax桌面端接入办公软件实现拟人操作 Qwen3多角色推理性能翻倍，裸机架构算力升九倍，实时手势零延迟生成 教育部发文推AI必修课，Vidu声画力压谷歌，斯坦福" icon="calendar" >}}
+{{< card link="/2026-04/2026-04-16" title="AI资讯日报 2026/04/16" subtitle="OpenAI发布智能体开发套件原生沙箱，VS2022原生支持MCP协议，谷歌语音响应极速 Midjourney V8.1渲染提速三倍原生2K生成，Adobe助手自动化，Claude强制执行实名核验 O" icon="calendar" >}}
+  {{< card link="/2026-04/2026-04-15" title="AI资讯日报 2026/04/15" subtitle="Claude重构支持多任务编程，MiniMax桌面端接入办公软件实现拟人操作 Qwen3多角色推理性能翻倍，裸机架构算力升九倍，实时手势零延迟生成 教育部发文推AI必修课，Vidu声画力压谷歌，斯坦福" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-14" title="AI资讯日报 2026/04/14" subtitle="小鹏首发图灵芯片，Grok大范围开放电脑控制权，阿里桌面智能体开启部署 Claude获取真实网页控制权，Cloudflare推统一CLI，字节AI业务频现报错崩溃 Tora3对齐音视频物理一致性SAT" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-13" title="AI资讯日报 2026/04/13" subtitle="MiniMax M2.7开源兼音乐模型支持翻录 字节扣子升级支持自然语言移动编程 具身模型夺魁并揭露榜单作弊丑闻 硅谷惊现停招人类且AI暴露欺骗风险 谷歌开源预测模型及多款演进框架" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-12" title="AI资讯日报 2026/04/12" subtitle="Shopify向智能体开放后台读写权限，新引擎成功实现高质量物理模拟 软件行业因智能体替代导致市值蒸发，Anthropic公司营收大幅飙升 京东开源百亿参数空间智能模型，神父参与制定大模型伦理准则宪法" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-11" title="AI资讯日报 2026/04/11" subtitle="阿里Wan2.7登顶视频榜Word插件发布 蚂蚁夺冠图像检测警惕智能体漏洞 免费AI插广机写内容过半引创作危机 专家流失中美算力差距存大半年 整理编程实践脚本自动抢占福利" icon="calendar" >}}
-  {{< card link="/2026-04/2026-04-10" title="AI资讯日报 2026/04/10" subtitle="扣子2.5赋予Agent云设备与长期记忆，腾讯龙虾浏览器支持微信远程操控电脑 清华AutoSOTA一周刷新105个SOTA，智元GO-2具身模型成功率达98.5% OpenAI模型一次攻克五项Erdő" icon="calendar" >}}
 <!-- LATEST_6_CARDS_END -->
 {{< /cards >}}
 
@@ -53,7 +53,7 @@ cascade:
 初次访问？请先阅读 [AI 周报](/blog/weekly/)。它可以帮你快速梳理近期行业最重要的变化，避免陷入信息碎片的海洋。
 
 ### 2. 保持每日同步
-如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-04/2026-04-15)。每天仅需 5 分钟，即可同步全球 AI 节奏。
+如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-04/2026-04-16)。每天仅需 5 分钟，即可同步全球 AI 节奏。
 
 ### 3. 探索深度实践
 了解本站初衷，并在 [博客](/blog/) 中获取系统的 AI 工具应用与效率提升指南。
