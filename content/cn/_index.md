@@ -13,7 +13,7 @@ cascade:
 {{< /hextra/hero-headline >}}
 
 <div style="margin-top: 2rem; margin-bottom: 4rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-  {{< hextra/hero-badge link="/2026-04/2026-04-17" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
+  {{< hextra/hero-badge link="/2026-04/2026-04-18" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="/blog/weekly" >}}📊 浏览 AI 周报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="https://github.com/justlovemaki" >}}🤝 商务合作交流{{< /hextra/hero-badge >}}
 </div>
@@ -36,12 +36,12 @@ cascade:
 
 {{< cards cols="3" >}}
 <!-- LATEST_6_CARDS_START -->
-{{< card link="/2026-04/2026-04-17" title="AI资讯日报 2026/04/17" subtitle="OpenAI发布桌面Codex重塑工作流，Meta推智能平台优化架构，谷歌Gemini进苹果 GPT-5.4-Cyber筑安全网，Firebase泄露致天价账单，严防恶意接口盗资金 遥感大模型极速测绘" icon="calendar" >}}
+{{< card link="/2026-04/2026-04-18" title="AI资讯日报 2026/04/18" subtitle="Anthropic发布Claude Design重塑创意，阿里推交互世界模型赋能机器训练 GPT-Rosalind加速新药研发，字节DisCoGC优化存储，AI陪审团诊断超越专家 它石智航获4.55亿" icon="calendar" >}}
+  {{< card link="/2026-04/2026-04-17" title="AI资讯日报 2026/04/17" subtitle="OpenAI发布桌面Codex重塑工作流，Meta推智能平台优化架构，谷歌Gemini进苹果 GPT-5.4-Cyber筑安全网，Firebase泄露致天价账单，严防恶意接口盗资金 遥感大模型极速测绘" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-16" title="AI资讯日报 2026/04/16" subtitle="OpenAI发布智能体开发套件原生沙箱，VS2022原生支持MCP协议，谷歌语音响应极速 Midjourney V8.1渲染提速三倍原生2K生成，Adobe助手自动化，Claude强制执行实名核验 O" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-15" title="AI资讯日报 2026/04/15" subtitle="Claude重构支持多任务编程，MiniMax桌面端接入办公软件实现拟人操作 Qwen3多角色推理性能翻倍，裸机架构算力升九倍，实时手势零延迟生成 教育部发文推AI必修课，Vidu声画力压谷歌，斯坦福" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-14" title="AI资讯日报 2026/04/14" subtitle="小鹏首发图灵芯片，Grok大范围开放电脑控制权，阿里桌面智能体开启部署 Claude获取真实网页控制权，Cloudflare推统一CLI，字节AI业务频现报错崩溃 Tora3对齐音视频物理一致性SAT" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-13" title="AI资讯日报 2026/04/13" subtitle="MiniMax M2.7开源兼音乐模型支持翻录 字节扣子升级支持自然语言移动编程 具身模型夺魁并揭露榜单作弊丑闻 硅谷惊现停招人类且AI暴露欺骗风险 谷歌开源预测模型及多款演进框架" icon="calendar" >}}
-  {{< card link="/2026-04/2026-04-12" title="AI资讯日报 2026/04/12" subtitle="Shopify向智能体开放后台读写权限，新引擎成功实现高质量物理模拟 软件行业因智能体替代导致市值蒸发，Anthropic公司营收大幅飙升 京东开源百亿参数空间智能模型，神父参与制定大模型伦理准则宪法" icon="calendar" >}}
 <!-- LATEST_6_CARDS_END -->
 {{< /cards >}}
 
@@ -53,7 +53,7 @@ cascade:
 初次访问？请先阅读 [AI 周报](/blog/weekly/)。它可以帮你快速梳理近期行业最重要的变化，避免陷入信息碎片的海洋。
 
 ### 2. 保持每日同步
-如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-04/2026-04-17)。每天仅需 5 分钟，即可同步全球 AI 节奏。
+如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-04/2026-04-18)。每天仅需 5 分钟，即可同步全球 AI 节奏。
 
 ### 3. 探索深度实践
 了解本站初衷，并在 [博客](/blog/) 中获取系统的 AI 工具应用与效率提升指南。
