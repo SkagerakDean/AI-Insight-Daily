@@ -36,12 +36,12 @@ Boguang AI News
 
 {{< cards cols="3" >}}
 <!-- LATEST_6_CARDS_START -->
-{{< card link="/en/2026-04/2026-04-18" title="AI News Daily 2026/04/18" subtitle="Anthropic发布Claude Design重塑创意，阿里推交互世界模型赋能机器训练 GPT-Rosalind加速新药研发，字节DisCoGC优化存储，AI陪审团诊断超越专家 它石智航获4.55亿" icon="calendar" >}}
+{{< card link="/en/2026-04/2026-04-19" title="AI News Daily 2026/04/19" subtitle="Bolt实现代码跨项目搬运，Luma推出电影级方案，Grok低价语音接口上线 DeepSeek开源算子库加速模型推理，Kimi突破缓存技术，谷歌发布MCP调试利器 OpenAI巨资投芯片商，Curso" icon="calendar" >}}
+  {{< card link="/en/2026-04/2026-04-18" title="AI News Daily 2026/04/18" subtitle="Anthropic发布Claude Design重塑创意，阿里推交互世界模型赋能机器训练 GPT-Rosalind加速新药研发，字节DisCoGC优化存储，AI陪审团诊断超越专家 它石智航获4.55亿" icon="calendar" >}}
   {{< card link="/en/2026-04/2026-04-17" title="AI News Daily 2026/04/17" subtitle="OpenAI发布桌面Codex重塑工作流，Meta推智能平台优化架构，谷歌Gemini进苹果 GPT-5.4-Cyber筑安全网，Firebase泄露致天价账单，严防恶意接口盗资金 遥感大模型极速测绘" icon="calendar" >}}
   {{< card link="/en/2026-04/2026-04-16" title="AI News Daily 2026/04/16" subtitle="OpenAI发布智能体开发套件原生沙箱，VS2022原生支持MCP协议，谷歌语音响应极速 Midjourney V8.1渲染提速三倍原生2K生成，Adobe助手自动化，Claude强制执行实名核验 O" icon="calendar" >}}
   {{< card link="/en/2026-04/2026-04-15" title="AI News Daily 2026/04/15" subtitle="Claude重构支持多任务编程，MiniMax桌面端接入办公软件实现拟人操作 Qwen3多角色推理性能翻倍，裸机架构算力升九倍，实时手势零延迟生成 教育部发文推AI必修课，Vidu声画力压谷歌，斯坦福" icon="calendar" >}}
   {{< card link="/en/2026-04/2026-04-14" title="AI News Daily 2026/04/14" subtitle="小鹏首发图灵芯片，Grok大范围开放电脑控制权，阿里桌面智能体开启部署 Claude获取真实网页控制权，Cloudflare推统一CLI，字节AI业务频现报错崩溃 Tora3对齐音视频物理一致性SAT" icon="calendar" >}}
-  {{< card link="/en/2026-04/2026-04-13" title="AI News Daily 2026/04/13" subtitle="MiniMax M2.7开源兼音乐模型支持翻录 字节扣子升级支持自然语言移动编程 具身模型夺魁并揭露榜单作弊丑闻 硅谷惊现停招人类且AI暴露欺骗风险 谷歌开源预测模型及多款演进框架" icon="calendar" >}}
 <!-- LATEST_6_CARDS_END -->
 {{< /cards >}}
 
@@ -53,7 +53,7 @@ Boguang AI News
 For newcomers, the [AI Weekly](/en/blog/weekly/) is your ideal starting point! It's designed to help you quickly grasp crucial industry shifts, preventing you from getting lost in fragmented information. Let's get you up to speed!
 
 ### 2. Stay in Daily Sync
-The [AI Daily Archive](/en/2026-04/2026-04-18) is your go-to for staying on the cutting edge! Just 5 minutes a day will keep you perfectly aligned with the global AI pulse. Stay sharp! ⚡
+The [AI Daily Archive](/en/2026-04/2026-04-19) is your go-to for staying on the cutting edge! Just 5 minutes a day will keep you perfectly aligned with the global AI pulse. Stay sharp! ⚡
 
 ### 3. Explore Deeper Practice
 For deeper practice, the [Blog](/en/blog/) is where you should dive in! It offers structured guides on AI tools, workflows, and boosting your productivity. Unleash your inner tech wizard! 💡
