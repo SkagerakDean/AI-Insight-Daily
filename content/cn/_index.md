@@ -13,7 +13,7 @@ cascade:
 {{< /hextra/hero-headline >}}
 
 <div style="margin-top: 2rem; margin-bottom: 4rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-  {{< hextra/hero-badge link="/2026-04/2026-04-22" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
+  {{< hextra/hero-badge link="/2026-04/2026-04-23" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="/blog/weekly" >}}📊 浏览 AI 周报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="https://github.com/justlovemaki" >}}🤝 商务合作交流{{< /hextra/hero-badge >}}
 </div>
@@ -36,12 +36,12 @@ cascade:
 
 {{< cards cols="3" >}}
 <!-- LATEST_6_CARDS_START -->
-{{< card link="/2026-04/2026-04-22" title="AI资讯日报 2026/04/22" subtitle="GPT-Image-2登顶文生图竞技场，Gemini登陆Mac支绘图 Meta升级脸书搜索架构，特斯拉Cybercab开启量产路测，英特尔应对AI芯片产能困局 医疗内窥镜超分框架发布，长视频解耦存储增" icon="calendar" >}}
+{{< card link="/2026-04/2026-04-23" title="AI资讯日报 2026/04/23" subtitle="OpenAI推医疗版对话助手，Kimi支持智能体协作，Chrome集成Gemini自动办公。 谷歌TPU v8挑战英伟达，海信发AI芯片电视，Gemma 4模型支持全离线推理。 OpenAI成立B端实" icon="calendar" >}}
+  {{< card link="/2026-04/2026-04-22" title="AI资讯日报 2026/04/22" subtitle="GPT-Image-2登顶文生图竞技场，Gemini登陆Mac支绘图 Meta升级脸书搜索架构，特斯拉Cybercab开启量产路测，英特尔应对AI芯片产能困局 医疗内窥镜超分框架发布，长视频解耦存储增" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-21" title="AI资讯日报 2026/04/21" subtitle="OpenAI推出屏幕记忆功能，克劳德设计工具可一键生成交互原型。 苹果高层变动库克转任主席，人形机器人天工在马拉松赛跑赢人类。 月之暗面开源万亿参数模型，阿里通义千问发布空间智能高效架构。 研究显示过" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-20" title="AI资讯日报 2026/04/20" subtitle="Claude 4.7重构安全架构增强防御，Grok长文摘要上线 伯克利揭露评测作弊黑产，华科大MoDA架构突破深度检索瓶颈 OpenAI巨资联手Cerebras布局算力硬件，Meta挖角团队抢夺顶级智" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-19" title="AI资讯日报 2026/04/19" subtitle="Bolt实现代码跨项目搬运，Luma推出电影级方案，Grok低价语音接口上线 DeepSeek开源算子库加速模型推理，Kimi突破缓存技术，谷歌发布MCP调试利器 OpenAI巨资投芯片商，Curso" icon="calendar" >}}
   {{< card link="/2026-04/2026-04-18" title="AI资讯日报 2026/04/18" subtitle="Anthropic发布Claude Design重塑创意，阿里推交互世界模型赋能机器训练 GPT-Rosalind加速新药研发，字节DisCoGC优化存储，AI陪审团诊断超越专家 它石智航获4.55亿" icon="calendar" >}}
-  {{< card link="/2026-04/2026-04-17" title="AI资讯日报 2026/04/17" subtitle="OpenAI发布桌面Codex重塑工作流，Meta推智能平台优化架构，谷歌Gemini进苹果 GPT-5.4-Cyber筑安全网，Firebase泄露致天价账单，严防恶意接口盗资金 遥感大模型极速测绘" icon="calendar" >}}
 <!-- LATEST_6_CARDS_END -->
 {{< /cards >}}
 
@@ -53,7 +53,7 @@ cascade:
 初次访问？请先阅读 [AI 周报](/blog/weekly/)。它可以帮你快速梳理近期行业最重要的变化，避免陷入信息碎片的海洋。
 
 ### 2. 保持每日同步
-如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-04/2026-04-22)。每天仅需 5 分钟，即可同步全球 AI 节奏。
+如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-04/2026-04-23)。每天仅需 5 分钟，即可同步全球 AI 节奏。
 
 ### 3. 探索深度实践
 了解本站初衷，并在 [博客](/blog/) 中获取系统的 AI 工具应用与效率提升指南。
