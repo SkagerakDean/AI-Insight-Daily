@@ -36,12 +36,12 @@ Boguang AI News
 
 {{< cards cols="3" >}}
 <!-- LATEST_6_CARDS_START -->
-{{< card link="/en/2026-04/2026-04-26" title="AI News Daily 2026/04/26" subtitle="奥迪Q5L搭载华为乾崑智驾系统，涂鸦发布Hey Tuya全屋智能入口 智能体演化框架实现自主设计，DAVinCI架构显著削减模型幻觉 英伟达市值突破五万亿美元，全行业深陷公众信任危机与安全争议 Met" icon="calendar" >}}
+{{< card link="/en/2026-04/2026-04-27" title="AI News Daily 2026/04/27" subtitle="GPT-5.5 Pro视觉智商破门萨基准，DeepSeek API缓存降价九成助力开发者 Anthropic智能体开启自主交易，Claude派发额度，可灵剪映视频功能升级 伯克利发布深学物理理论框架，" icon="calendar" >}}
+  {{< card link="/en/2026-04/2026-04-26" title="AI News Daily 2026/04/26" subtitle="奥迪Q5L搭载华为乾崑智驾系统，涂鸦发布Hey Tuya全屋智能入口 智能体演化框架实现自主设计，DAVinCI架构显著削减模型幻觉 英伟达市值突破五万亿美元，全行业深陷公众信任危机与安全争议 Met" icon="calendar" >}}
   {{< card link="/en/2026-04/2026-04-25" title="AI News Daily 2026/04/25" subtitle="谷歌Gemini登陆Mac支持绘图，DeepSeek适配昇腾推长上下文，Claude现退订风波 桌面助手SentiCat公测，VARestorer图像超分速增十倍，NASA发布遥感模型HyperFM " icon="calendar" >}}
   {{< card link="/en/2026-04/2026-04-24" title="AI News Daily 2026/04/24" subtitle="GPT-5.5集GB300推3D游戏，谷歌Gemini语音逼真，可灵4K上线，腾讯混元开源 SSL-R1免标视觉学习，阿里Wan-Image超清渲染，PASTA攻击威胁ViT安全 Anthropic估" icon="calendar" >}}
   {{< card link="/en/2026-04/2026-04-23" title="AI News Daily 2026/04/23" subtitle="OpenAI推医疗版对话助手，Kimi支持智能体协作，Chrome集成Gemini自动办公。 谷歌TPU v8挑战英伟达，海信发AI芯片电视，Gemma 4模型支持全离线推理。 OpenAI成立B端实" icon="calendar" >}}
   {{< card link="/en/2026-04/2026-04-22" title="AI News Daily 2026/04/22" subtitle="GPT-Image-2登顶文生图竞技场，Gemini登陆Mac支绘图 Meta升级脸书搜索架构，特斯拉Cybercab开启量产路测，英特尔应对AI芯片产能困局 医疗内窥镜超分框架发布，长视频解耦存储增" icon="calendar" >}}
-  {{< card link="/en/2026-04/2026-04-21" title="AI News Daily 2026/04/21" subtitle="OpenAI推出屏幕记忆功能，克劳德设计工具可一键生成交互原型。 苹果高层变动库克转任主席，人形机器人天工在马拉松赛跑赢人类。 月之暗面开源万亿参数模型，阿里通义千问发布空间智能高效架构。 研究显示过" icon="calendar" >}}
 <!-- LATEST_6_CARDS_END -->
 {{< /cards >}}
 
@@ -53,7 +53,7 @@ Boguang AI News
 For newcomers, the [AI Weekly](/en/blog/weekly/) is your ideal starting point! It's designed to help you quickly grasp crucial industry shifts, preventing you from getting lost in fragmented information. Let's get you up to speed!
 
 ### 2. Stay in Daily Sync
-The [AI Daily Archive](/en/2026-04/2026-04-26) is your go-to for staying on the cutting edge! Just 5 minutes a day will keep you perfectly aligned with the global AI pulse. Stay sharp! ⚡
+The [AI Daily Archive](/en/2026-04/2026-04-27) is your go-to for staying on the cutting edge! Just 5 minutes a day will keep you perfectly aligned with the global AI pulse. Stay sharp! ⚡
 
 ### 3. Explore Deeper Practice
 For deeper practice, the [Blog](/en/blog/) is where you should dive in! It offers structured guides on AI tools, workflows, and boosting your productivity. Unleash your inner tech wizard! 💡
