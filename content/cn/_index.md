@@ -13,7 +13,7 @@ cascade:
 {{< /hextra/hero-headline >}}
 
 <div style="margin-top: 2rem; margin-bottom: 4rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-  {{< hextra/hero-badge link="/2026-05/2026-05-02" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
+  {{< hextra/hero-badge link="/2026-05/2026-05-03" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="/blog/weekly" >}}📊 浏览 AI 周报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="https://github.com/justlovemaki" >}}🤝 商务合作交流{{< /hextra/hero-badge >}}
 </div>
@@ -36,7 +36,8 @@ cascade:
 
 {{< cards cols="3" >}}
 <!-- LATEST_6_CARDS_START -->
-{{< card link="/2026-05/2026-05-02" title="AI资讯日报 2026/05/02" subtitle="GPT-5.5首周营收炸裂，Anthropic下周开开发者大会，通义千问联手Fireworks降本。 RecGen突破三维重构，DeepSeek发布视觉原语，Meta预训练实现数据自进化。 五角大楼签" icon="calendar" >}}
+{{< card link="/2026-05/2026-05-03" title="AI资讯日报 2026/05/03" subtitle="全息交互毫秒级响应，JEPA世界模型获突破，群体智能协作效能倍增 顶尖模型逻辑测试折戟，VS Code强制署名惹议，加州严管无人驾驶违章 苹果泄露Claude开发细节，xAI算力利用率仅一成，Meta" icon="calendar" >}}
+  {{< card link="/2026-05/2026-05-02" title="AI资讯日报 2026/05/02" subtitle="GPT-5.5首周营收炸裂，Anthropic下周开开发者大会，通义千问联手Fireworks降本。 RecGen突破三维重构，DeepSeek发布视觉原语，Meta预训练实现数据自进化。 五角大楼签" icon="calendar" >}}
   {{< card link="/2026-05/2026-05-01" title="AI资讯日报 2026/05/01" subtitle="Stripe发布288项金融基建更新，Grok 4.3性能霸榜，GPT 5.5增加逻辑切换模式 ChatGPT 2.0精绘架构图，快手KroWork口令建工具，Codex实现自主编程迭代 谷歌医疗协作" icon="calendar" >}}
 <!-- LATEST_6_CARDS_END -->
 {{< /cards >}}
@@ -49,7 +50,7 @@ cascade:
 初次访问？请先阅读 [AI 周报](/blog/weekly/)。它可以帮你快速梳理近期行业最重要的变化，避免陷入信息碎片的海洋。
 
 ### 2. 保持每日同步
-如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-05/2026-05-02)。每天仅需 5 分钟，即可同步全球 AI 节奏。
+如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-05/2026-05-03)。每天仅需 5 分钟，即可同步全球 AI 节奏。
 
 ### 3. 探索深度实践
 了解本站初衷，并在 [博客](/blog/) 中获取系统的 AI 工具应用与效率提升指南。
