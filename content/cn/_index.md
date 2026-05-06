@@ -13,7 +13,7 @@ cascade:
 {{< /hextra/hero-headline >}}
 
 <div style="margin-top: 2rem; margin-bottom: 4rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-  {{< hextra/hero-badge link="/2026-05/2026-05-05" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
+  {{< hextra/hero-badge link="/2026-05/2026-05-06" >}}🚀 阅读今日日报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="/blog/weekly" >}}📊 浏览 AI 周报{{< /hextra/hero-badge >}}
   {{< hextra/hero-badge link="https://github.com/justlovemaki" >}}🤝 商务合作交流{{< /hextra/hero-badge >}}
 </div>
@@ -36,7 +36,8 @@ cascade:
 
 {{< cards cols="3" >}}
 <!-- LATEST_6_CARDS_START -->
-{{< card link="/2026-05/2026-05-05" title="AI资讯日报 2026/05/05" subtitle="OpenAI重构WebRTC低延迟语音架构，FLUX推超写实LoRA，Cursor及可灵AI功能大幅升级 港理工开源思考型手语翻译模型，新型注意力攻击秒破LLaMA-3安全对齐防御，科研图谱发布 Be" icon="calendar" >}}
+{{< card link="/2026-05/2026-05-06" title="AI资讯日报 2026/05/06" subtitle="OpenAI发GPT-5.5即刻版，智能体手机曝光，联发科供芯二七年量产 Meta网页推十六路智能体并发，Chrome静默装大模型并占巨量空间 MotionCache六倍提速视频生成，TabPFN实现" icon="calendar" >}}
+  {{< card link="/2026-05/2026-05-05" title="AI资讯日报 2026/05/05" subtitle="OpenAI重构WebRTC低延迟语音架构，FLUX推超写实LoRA，Cursor及可灵AI功能大幅升级 港理工开源思考型手语翻译模型，新型注意力攻击秒破LLaMA-3安全对齐防御，科研图谱发布 Be" icon="calendar" >}}
   {{< card link="/2026-05/2026-05-04" title="AI资讯日报 2026/05/04" subtitle="Anthropic年化收入超440亿，发布官方指南助力企业全自动运营 马斯克诉OpenAI案揭露转型内幕，Kimi发布2.5万亿参数模型重塑格局 斯坦福合成病毒研究登Nature封面，AI精准识别胰腺" icon="calendar" >}}
   {{< card link="/2026-05/2026-05-03" title="AI资讯日报 2026/05/03" subtitle="全息交互毫秒级响应，JEPA世界模型获突破，群体智能协作效能倍增 顶尖模型逻辑测试折戟，VS Code强制署名惹议，加州严管无人驾驶违章 苹果泄露Claude开发细节，xAI算力利用率仅一成，Meta" icon="calendar" >}}
   {{< card link="/2026-05/2026-05-02" title="AI资讯日报 2026/05/02" subtitle="GPT-5.5首周营收炸裂，Anthropic下周开开发者大会，通义千问联手Fireworks降本。 RecGen突破三维重构，DeepSeek发布视觉原语，Meta预训练实现数据自进化。 五角大楼签" icon="calendar" >}}
@@ -52,7 +53,7 @@ cascade:
 初次访问？请先阅读 [AI 周报](/blog/weekly/)。它可以帮你快速梳理近期行业最重要的变化，避免陷入信息碎片的海洋。
 
 ### 2. 保持每日同步
-如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-05/2026-05-05)。每天仅需 5 分钟，即可同步全球 AI 节奏。
+如果您想紧跟技术最前沿，直接进入 [AI 资讯日报归档](/2026-05/2026-05-06)。每天仅需 5 分钟，即可同步全球 AI 节奏。
 
 ### 3. 探索深度实践
 了解本站初衷，并在 [博客](/blog/) 中获取系统的 AI 工具应用与效率提升指南。
